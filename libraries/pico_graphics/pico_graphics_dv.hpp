@@ -19,6 +19,8 @@ namespace pimoroni {
       virtual void set_depth(uint8_t new_depth) {}
       virtual void set_bg(uint c) {};
 
+      virtual bool render_pico_vector_tile(const Rect &bounds, uint8_t* alpha_data, uint32_t stride, uint8_t alpha_type);
+
       PicoGraphicsDV(uint16_t width, uint16_t height, DVDisplay &dv_display)
       : PicoGraphics(width, height, nullptr),
         driver(dv_display)
